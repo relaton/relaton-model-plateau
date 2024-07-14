@@ -3,7 +3,7 @@ include "biblio-standoc.rnc" {
 BibDataExtensionType =
   attribute schema-version { text }?,
         doctype, editorialgroup, ics*, structuredidentifier,
-        stagename?
+        stagename?, cover?, filesize?
 
 DocumentType =
     "handbook" | "technical-report" | "annex"
@@ -42,4 +42,5 @@ stagename = element stagename {
   text
 }
 
-
+cover = element cover { text }
+filesize = element filesize { text }
