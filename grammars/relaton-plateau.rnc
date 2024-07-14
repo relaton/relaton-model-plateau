@@ -42,5 +42,5 @@ stagename = element stagename {
   text
 }
 
-cover = element cover { text }
-filesize = element filesize { text }
+cover = element cover { image }
+filesize = element filesize { xsd:int }
