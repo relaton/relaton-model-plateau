@@ -2,7 +2,7 @@ include "biblio-standoc.rnc" {
 
 BibDataExtensionType =
   attribute schema-version { text }?,
-        doctype, editorialgroup, ics*, structuredidentifier,
+        doctype, docsubtype?, editorialgroup?, ics*, structuredidentifier,
         stagename?, cover?, filesize?
 
 DocumentType =
@@ -42,5 +42,5 @@ stagename = element stagename {
   text
 }
 
-cover = element cover { image }
+cover = element cover { image-no-id }
 filesize = element filesize { xsd:int }
