@@ -1,11 +1,5 @@
 include "biblio-standoc.rnc" {
 
-BibDataExtensionType &=
-        ## Human-readable name of the stage of publication, corresponding to the numeric stage code given in `/bibdata/status/stage`
-        stagename?, 
-        ## Size of output file, in bytes
-        filesize?
-
 DocumentType =
     "handbook" | "technical-report" | "annex"
 
@@ -13,6 +7,13 @@ DocumentType =
 editorialgroup = element editorialgroup { ISOProjectGroup }
 
 }
+
+BibDataExtensionType &=
+        ## Human-readable name of the stage of publication, corresponding to the numeric stage code given in `/bibdata/status/stage`
+        stagename?,
+        ## Size of output file, in bytes
+        filesize?
+
 
 ISOProjectGroup =
   agency*, technical-committee+, subcommittee*, workgroup*, secretariat?
